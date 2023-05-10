@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="dark."> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="signup.css" />
+    <title>signup</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="head"><h2>Sign Up</h2></div>
+        <label for="first-name">First Name</label>
+        <input
+          type="text"
+          id="first-name"
+          name="first-name"
+          required
+          placeholder="Enter your First Name"
+        />
+
+        <label for="last-name">Last Name</label>
+        <input
+          type="text"
+          id="last-name"
+          name="last-name"
+          required
+          placeholder="Enter your Last Name"
+        />
+
+        <label for="Work Email Address"> Email Address</label>
+        <input
+          type="text"
+          id="Email Address"
+          name="Email Address"
+          required
+          placeholder="Enter email address"
+        />
+
+        <label for="phone-number">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="Enter your password"
+        />
+         <label for="phone-number">child name</label>
+        <input
+          type="text"
+          name="childname"
+          id="childname"
+          required
+          placeholder="Enter your name"
+        />
+         <label for="phone-number">child phone</label>
+        <input
+          type="number"
+          name="childphone"
+          id="childphone"
+          required
+          placeholder="Enter your phone"
+        />
+         <label for="phone-number">child Password</label>
+        <input
+          type="password"
+          name="childpassword"
+          id="childpassword"
+          required
+          placeholder="Enter your password"
+        />
+
+        <a onclick="signup(this)" class="button">Sign in</a>
+      </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="signup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+}
+
+.container {
+  top: -60px;
+  width: 332px;
+  height: 530px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff;
+  margin-top: 146px;
+  position: relative;
+  border-radius: 50px 5px;
+  border: 1px solid #21899c;
+}
+.head {
+  text-align: center;
+  margin-bottom: 52px;
+  margin-top: -106px;
+}
+form {
+  width: 80%;
+  margin-left: -9px;
+  margin-top: 81px;
+}
+
+h2 {
+  text-align: center;
+  font-size: x-large;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #21899c;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+.checkbox {
+  display: flex;
+  margin-left: -109px;
+  margin-top: 9px;
+}
+.checkboxx {
+  margin-left: -46px;
+  color: black;
+}
+.terms {
+  margin-left: -172px;
+  text-align: center;
+}
+.button {
+  display: block;
+  margin-top: 10px;
+  background-color: #21899c;
+  color: white;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  padding: 15px 86px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: black;
+}

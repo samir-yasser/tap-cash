@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive  Dashboard </title>
+    <!-- ======= Styles ====== -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Z8nDFtZlka3c0G0aMhJzJWzGg6LdW7i1aNgV9Mvxt3rX+oG0zBJgCm+K6tGtIjliRvq7JyH0aQmXGdnoQcJx8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+	<!-- تضمين ملفات Chart.js -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+           
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name=""></ion-icon>
+                        </span>
+                        
+                        <h1 class="title tab">Tab cash</h1>
+                    </a>
+                   
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">transactions</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="notfication.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">notfication</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search" style="text-align:center">
+                        <span id="username">Username</span>
+                </div>
+
+                <div class="user">
+                  
+                    <img src="img/customer01.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">31.600 L.E</div>
+                        <div class="cardName">income</div>
+                        
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="arrow-back"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">10.000 L.E</div>
+                        <div class="cardName">outcome</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="arrow-forward"></ion-icon>
+                       <style>
+                        .slanted-arrow {
+                            transform: rotate(45deg);
+                        }
+                    </style>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">5.500</div>
+                        <div class="cardName">Child Outcome</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">1.500</div>
+                        <div class="cardName">child income</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                </div>
+            </div>
+
+         <div class="chartbox">
+            <div class="chart">
+                <h4>Analysis Chart</h4>
+    
+                <!-- إنشاء عنصر canvas -->
+                <canvas style="width: 600px" id="myChart"></canvas>
+                <script>
+                    // كتابة كود JavaScript لإنشاء البيانات
+                    var ctx = document.getElementById('myChart').getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                            datasets: [{
+                                label: 'money anlysis',
+                                data: [12, 19, 3, 5, 2, 3, 8],
+                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                borderColor: 'rgba(255, 99, 132, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            legend: {
+                                display: false
+                            },
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    },
+                                    display: false
+                                }],
+                                xAxes: [{
+                                    gridLines: {
+                                        display: false
+                                    },
+                                    ticks: {
+                                        display: false
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                </script>
+    
+                </div>
+                <div class="insights">
+       
+                    
+        <div class="expenses">
+           
+            <div class="middle">
+              <div class="left">
+                <h4>Total Paid</h4>
+                <h2>$25,024</h2>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>90%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">last 24 hours</small>
+          </div>
+
+
+          <div class="sales">
+           
+            <div class="middle">
+              <div class="left">
+                <h4>transactions</h4>
+                <h2>$25,024</h2>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>75%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">last 24 hours</small>
+          </div>
+
+          <div class="income">
+            
+            <div class="middle">
+              <div class="left">
+                <h4>Child wallet</h4>
+                <h2>$25,024</h2>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>40%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">last 24 hours</small>
+          </div>
+                </div>
+            
+         </div>
+<!-- ****************************start payment*************************************** -->
+        <section class="payment">
+<div class="box">
+    <div class="head"> <h2> monthly payment</h2>
+    <a href="">Add +</a>
+    </div>
+   
+
+    <div class="min-box">
+      <div class="img">
+       
+        <img src="img/Vector.png" alt="">
+     
+      </div>
+   
+        <div class="Electricity">
+            <h3>
+                Electricity
+            </h3>
+            <p>pay before 15 feb <span>5,00 L.E</span></p>
+            <a href="">pay now</a></div>
+    </div>
+
+    
+    <div class="min-box">
+        <div class="imgg">
+         
+            <img src="img/mdi_internet.png" alt="">
+        </div>
+     
+          <div class="Electricity">
+              <h3>
+                  Electricity
+              </h3>
+              <p>pay before 15 feb <span>5,00 L.E</span></p>
+              <a class="aa" href="">pay now</a></div>
+      </div>
+</div>
+
+<div class="box-visa">
+    <h2 class="h">card information</h2>
+    <div class="visa">
+        
+        <div class="name">
+            <h3>card name</h3>
+            <p>Adeniyi Okunuga</p>
+            <p>cvv <br> <br>
+                ***
+            </p>
+        </div>
+        <div class="name">
+            <h3>card Number</h3>
+            <p>**** **** **** 9123</p>
+            <p>Valid until <br> <br>
+                05/25
+            </p>
+        </div>
+</div>
+<div class="imgvisa">
+    <img src="img/Group 1000001035.png" alt="">
+</div>
+</div>
+        </section>
+    <!-- =========== Scripts =========  -->
+    <script src="main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

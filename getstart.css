@@ -1,0 +1,705 @@
+/* start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --main-color: rgb(57, 120, 132, 100);
+  --main-color-alt: #085fa6;
+  --main-transition: 0.3s;
+  --main-paddding-top: 100px;
+  --main-paddding-bottom: 100px;
+  --section-background: #ececec;
+}
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* end global rules */
+
+/* start header */
+
+.header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.buttom2 {
+  font-weight: bold;
+  font-size: larger;
+  left: 50px;
+  position: absolute;
+  top: 25px;
+}
+.buttom2 a {
+  color: black;
+
+  padding: 2px 16px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+@media (max-width: 767px) {
+  .header .logo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .main-nav > li > a {
+    padding: 10px;
+    font-size: 14px;
+    height: 40px;
+  }
+  
+}
+
+/* start 2 box */
+.form {
+  padding-top: 100px;
+
+
+}
+.form .container {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+.form .box {
+  background-color: #efeded;
+  position: relative;
+  width: 325px;
+  height: 447px;
+  text-align: center;
+  transition: var(--main-transition);
+  box-shadow: 0 12px 20px rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  border-radius: 39px 0;
+  z-index: 1;
+}
+
+.form .box .p1 {
+  text-align: center;
+  font-weight: 550;
+  font-size: 22px;
+}
+.form .box .p2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.form .sign a {
+  background-color: var(--main-color);
+  padding: 8px 81px;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.signup {
+  margin-top: 10px;
+}
+.form .signup span {
+  color: black;
+}
+.form .signup a {
+  color: #2e549b;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 50%;
+  left: 0;
+  top: 0;
+  background-color: #f6f6f6;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.box:hover::before,
+.box:hover::after {
+  width: 100%;
+}
+
+/* small */
+@media (min-width: 768) {
+  .box {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992) {
+  .box {
+    width: 970px;
+  }
+}
+/* larger */
+@media (min-width: 1200) {
+  .box {
+    width: 1170px;
+  }
+}
+
+/* end 2 box */
+/* start footer */
+
+.end .container {
+  margin-top: var(--main-paddding-top);
+  background-color: var(--main-color);
+}
+.end {
+}
+.line {
+  display: flex;
+  color: white;
+  padding-top: 20px;
+}
+.line hr {
+  background-color: white;
+  height: 5px;
+  margin-top: 13px;
+}
+span hr {
+  justify-content: space-around;
+}
+.text-footer {
+  display: flex;
+  margin-bottom: -55px;
+  justify-content: center;
+}
+.text-footer span {
+  margin-top: 2%;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+}
+.follow {
+  display: block;
+  text-align: center;
+  color: white;
+}
+.end .icon {
+  text-align: center;
+  margin-left: 15px;
+}
+.end .icon a {
+  color: white;
+  margin-right: 20px;
+  text-align: center;
+}
+.end .icon a:hover {
+  color: black;
+}
+.end-footer {
+  display: inline-block;
+  display: flex;
+  padding: 10px 0px 19px;
+  margin-left: 40%;
+  color: white;
+}
+
+.end-footer span {
+  justify-content: space-between;
+  text-align: center;
+}
+/* end footer */
+/* start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --main-color: rgb(57, 120, 132, 100);
+  --main-color-alt: #085fa6;
+  --main-transition: 0.3s;
+  --main-paddding-top: 100px;
+  --main-paddding-bottom: 100px;
+  --section-background: #ececec;
+}
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* end global rules */
+
+/* start header */
+
+.header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.buttom2 {
+  font-weight: bold;
+  font-size: larger;
+  left: 50px;
+  position: absolute;
+  top: 25px;
+}
+.buttom2 a {
+  color: black;
+
+  padding: 2px 16px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+@media (max-width: 767px) {
+  .header .logo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .main-nav > li > a {
+    padding: 10px;
+    font-size: 14px;
+    height: 40px;
+  }
+  
+}
+
+/* start 2 box */
+.form {
+  padding-top: 100px;
+
+
+}
+.form .container {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+.form .box {
+  background-color: #efeded;
+  position: relative;
+  width: 325px;
+  height: 447px;
+  text-align: center;
+  transition: var(--main-transition);
+  box-shadow: 0 12px 20px rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  border-radius: 39px 0;
+  z-index: 1;
+}
+
+.form .box .p1 {
+  text-align: center;
+  font-weight: 550;
+  font-size: 22px;
+}
+.form .box .p2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.form .sign a {
+  background-color: var(--main-color);
+  padding: 8px 81px;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.signup {
+  margin-top: 10px;
+}
+.form .signup span {
+  color: black;
+}
+.form .signup a {
+  color: #2e549b;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 50%;
+  left: 0;
+  top: 0;
+  background-color: #f6f6f6;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.box:hover::before,
+.box:hover::after {
+  width: 100%;
+}
+
+/* small */
+@media (min-width: 768) {
+  .box {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992) {
+  .box {
+    width: 970px;
+  }
+}
+/* larger */
+@media (min-width: 1200) {
+  .box {
+    width: 1170px;
+  }
+}
+
+/* end 2 box */
+/* start footer */
+
+.end .container {
+  margin-top: var(--main-paddding-top);
+  background-color: var(--main-color);
+}
+.end {
+}
+.line {
+  display: flex;
+  color: white;
+  padding-top: 20px;
+}
+.line hr {
+  background-color: white;
+  height: 5px;
+  margin-top: 13px;
+}
+span hr {
+  justify-content: space-around;
+}
+.text-footer {
+  display: flex;
+  margin-bottom: -55px;
+  justify-content: center;
+}
+.text-footer span {
+  margin-top: 2%;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+}
+.follow {
+  display: block;
+  text-align: center;
+  color: white;
+}
+.end .icon {
+  text-align: center;
+  margin-left: 15px;
+}
+.end .icon a {
+  color: white;
+  margin-right: 20px;
+  text-align: center;
+}
+.end .icon a:hover {
+  color: black;
+}
+.end-footer {
+  display: inline-block;
+  display: flex;
+  padding: 10px 0px 19px;
+  margin-left: 40%;
+  color: white;
+}
+
+.end-footer span {
+  justify-content: space-between;
+  text-align: center;
+}
+/* end footer */
+/* start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --main-color: rgb(57, 120, 132, 100);
+  --main-color-alt: #085fa6;
+  --main-transition: 0.3s;
+  --main-paddding-top: 100px;
+  --main-paddding-bottom: 100px;
+  --section-background: #ececec;
+}
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* end global rules */
+
+/* start header */
+
+.header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.buttom2 {
+  font-weight: bold;
+  font-size: larger;
+  left: 50px;
+  position: absolute;
+  top: 25px;
+}
+.buttom2 a {
+  color: black;
+
+  padding: 2px 16px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+@media (max-width: 767px) {
+  .header .logo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .main-nav > li > a {
+    padding: 10px;
+    font-size: 14px;
+    height: 40px;
+  }
+  
+}
+
+/* start 2 box */
+.form {
+  padding-top: 100px;
+
+
+}
+.form .container {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+.form .box {
+  background-color: #efeded;
+  position: relative;
+  width: 325px;
+  height: 447px;
+  text-align: center;
+  transition: var(--main-transition);
+  box-shadow: 0 12px 20px rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  border-radius: 39px 0;
+  z-index: 1;
+}
+
+.form .box .p1 {
+  text-align: center;
+  font-weight: 550;
+  font-size: 22px;
+}
+.form .box .p2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.form .sign a {
+  background-color: var(--main-color);
+  padding: 8px 81px;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.signup {
+  margin-top: 10px;
+}
+.form .signup span {
+  color: black;
+}
+.form .signup a {
+  color: #2e549b;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 50%;
+  left: 0;
+  top: 0;
+  background-color: #f6f6f6;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.box:hover::before,
+.box:hover::after {
+  width: 100%;
+}
+
+/* small */
+@media (min-width: 768) {
+  .box {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992) {
+  .box {
+    width: 970px;
+  }
+}
+/* larger */
+@media (min-width: 1200) {
+  .box {
+    width: 1170px;
+  }
+}
+
+/* end 2 box */
+/* start footer */
+
+.end .container {
+  margin-top: var(--main-paddding-top);
+  background-color: var(--main-color);
+}
+.end {
+}
+.line {
+  display: flex;
+  color: white;
+  padding-top: 20px;
+}
+.line hr {
+  background-color: white;
+  height: 5px;
+  margin-top: 13px;
+}
+span hr {
+  justify-content: space-around;
+}
+.text-footer {
+  display: flex;
+  margin-bottom: -55px;
+  justify-content: center;
+}
+.text-footer span {
+  margin-top: 2%;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+}
+.follow {
+  display: block;
+  text-align: center;
+  color: white;
+}
+.end .icon {
+  text-align: center;
+  margin-left: 15px;
+}
+.end .icon a {
+  color: white;
+  margin-right: 20px;
+  text-align: center;
+}
+.end .icon a:hover {
+  color: black;
+}
+.end-footer {
+  display: inline-block;
+  display: flex;
+  padding: 10px 0px 19px;
+  margin-left: 40%;
+  color: white;
+}
+
+.end-footer span {
+  justify-content: space-between;
+  text-align: center;
+}
+/* end footer */

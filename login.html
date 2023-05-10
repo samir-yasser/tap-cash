@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="dark."> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="login.css" />
+    <title>login</title>
+  </head>
+  <body>
+    <div class="login_form_container">
+      <div class="login_form">
+        <h2>Sign in</h2>
+        <label for="">phone number</label>
+        <div class="input_group">
+          <input
+            type="text"
+            name="phone"
+            placeholder="Enter your phone number"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <br /><label for="">Password</label>
+        <div class="input_group">
+          <div class="ico"><i class="fa fa-unlock-alt"></i></div>
+
+          <input
+            type="password"
+            name="password"
+            placeholder="*********"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="button_group" id="login_button">
+          <a onclick="login(this)" >Sign in</a>
+        </div>
+        <div class="cheik">
+          <input type="checkbox" name="" id="" />
+          <h5>Remember me</h5>
+        </div>
+        <div class="fotter">
+          <a class="forget"> Forgot Password ?</a>
+          <div class="signup">
+            <span>Don't have account ? </span>
+            <a href="signup.html"> Sign Up </a>
+          </div>
+        </div>
+        <div class="line">
+          <hr
+            style="
+              background-color: black;
+              display: inline-block;
+              width: 25%;
+              margin-right: 5px;
+            "
+          />
+          <span style="display: inline-block; color: black"
+            >Or Sign in With</span
+          >
+          <hr
+            style="
+              background-color: black;
+              display: inline-block;
+              width: 25%;
+              margin-left: 5px;
+            "
+          />
+        </div>
+        <div class="button_group" id="">
+          <a class="ss">Sign in width Google</a>
+        </div>
+        <div class="button_group" id="">
+          <a class="bb">Sign in width Apple</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

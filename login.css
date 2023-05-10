@@ -1,0 +1,243 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+  background-color: #d9d9d9;
+}
+.login_form_container {
+  position: relative;
+  width: 360px;
+  height: 600px;
+  max-width: 400px;
+  max-height: 600px;
+  background: white;
+  border-radius: 50px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 55px;
+}
+.login_form_container::before {
+  position: absolute;
+  width: 170%;
+  height: 170%;
+  content: "";
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #21899c
+  );
+  animation: rotate_border 6s linear infinite;
+}
+.login_form_container::after {
+  position: absolute;
+  width: 170%;
+  height: 170%;
+  content: "";
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    black
+  );
+  animation: rotate_border 6s linear infinite;
+  animation-delay: -3s;
+}
+@keyframes rotate_border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.login_form {
+  width: 365px;
+  height: 600px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50px 5px;
+  inset: 5px;
+  padding: 50px 40px;
+  z-index: 10;
+  position: relative;
+}
+.login_form h2 {
+  text-align: center;
+  margin-bottom: 37px;
+  margin-top: -25px;
+}
+p {
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+.input_group {
+  margin-top: 11px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.input_text {
+  position: relative;
+  width: 95%;
+  height: 39px;
+  background: transparent;
+  border-radius: 10px;
+  /* outline: none; */
+  padding-left: 10px;
+  border-color: #21899c;
+}
+.cheik {
+  color: #777;
+  position: absolute;
+  top: 265px;
+  width: 146px;
+  display: flex;
+  gap: 7px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.login_form label {
+  color: #21899c;
+  margin-top: 20px;
+}
+
+::placeholder {
+  font-size: 15px;
+}
+.ico {
+  position: absolute;
+  color: #d9d9d9;
+  margin-left: -10px;
+}
+.fa {
+  font-size: 20px;
+  margin-left: 245px;
+}
+#login_button {
+  position: relative;
+  height: 40px;
+  transition: 1s;
+  margin-top: 59px;
+}
+#login_button :hover{
+  color: black;
+}
+#login_button a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 2px;
+  /* border: 1px solid rgb(43, 42, 42); */
+  border-radius: 15px;
+  background-color: #21899c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.button_group {
+  position: relative;
+  height: 40px;
+  transition: 1s;
+  margin-top: 34px;
+}
+
+.ss {
+  background-color: white;
+  color: black;
+  position: absolute;
+  border: 2px solid #21899c;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 2px;
+  /* border: 1px solid rgb(43, 42, 42); */
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ss:hover{
+  background-color: black;
+  color: white;
+}
+.bb {
+  background-color: black;
+  color: white;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 2px;
+  /* border: 1px solid rgb(43, 42, 42); */
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.bb:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #21899c;
+}
+.fotter .signup {
+  margin-top: 80px;
+  justify-content: center;
+  display: flex;
+  padding-bottom: 10px;
+}
+.fotter .signup a {
+  color: #21899c;
+}
+
+.fotter .signup span {
+  color: #777;
+  display: block;
+  padding-right: 4px;
+}
+
+.fotter .forget {
+  display: flex;
+  margin-top: -76px;
+  margin-left: 181px;
+  font-size: 11px;
+}
+.fotter a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #777;
+}
+
+.line {
+  margin-bottom: 22px;
+  margin-top: 12px;
+}
