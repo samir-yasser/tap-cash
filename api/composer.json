@@ -1,0 +1,12 @@
+{
+    "name": "lapstore/smart_wallet",
+    "autoload": {
+        "psr-4": {
+            "Lapstore\\SmartWallet\\": "/"
+        }
+    },
+    "require": {
+        "monolog/monolog": "1.0.*",
+        "firebase/php-jwt": "^6.3"
+    }
+}
